@@ -1,0 +1,37 @@
+Week 3 Day 4 Research Questions
+
+1. What are loaders and how do we implement loaders?
+
+Loaders are used to load data from a content provider or other data source for display in an
+FragmentActivity or Fragment.  You typically initialize a Loader within the activity's onCreate()
+method, or within the fragment's onCreate(). They are implemented in Android by using the syntax:
+
+            supportLoaderManager.initLoader(0, null, this)
+
+2. What is an AsyncTaskLoader?
+
+AsyncTaskloader provides a method, loadInBackground() , that runs on a separate thread. The results
+of loadInBackground() are automatically delivered to the UI thread, by way of the
+onLoadFinished() LoaderManager callback
+
+3. What is a Handler Thread for?
+
+A handler thread is used to handle multiple jobs on the background thread. It is an extension of
+thread, which works with a Looper. They process commands from a queue.
+
+4. What are some common threading restrictions in android?
+
+Some common threading restrictions in Android are: Do not block the UI thread as well as do not access
+the Android UI toolkit from outside the UI thread.
+
+5. What are thread pools and thread pool executors?
+
+Thread pools can run multiple parallel instances of a task. Thread pools address two different
+problems: they usually provide improved performance when executing large numbers of asynchronous
+tasks, due to reduced per-task invocation overhead, and they provide a means of bounding and
+managing the resources, including threads, consumed when executing a collection of tasks.
+
+Thread pool executors are is an ExecutorService to execute each submitted task using one of possibly
+several pooled threads, normally configured using Executors factory methods. It also provides various
+utility methods to check current threads statistics and control them. ThreadpoolExecutor has a timeout
+that can be used to wind down unused threads.
